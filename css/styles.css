@@ -16,7 +16,17 @@
     text-align: center;
     background-color: black;
     color: aliceblue;
+    
 }
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lower {
+    text-transform: lowercase;
+}
+
 
 .content {
     flex-grow: 1;

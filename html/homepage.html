@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Головна сторінка</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <div class="container">
   <div class="header">
     <div class="mobileHeader">
       <a class="logo-link" href="https://sportlife.ua/uk/">
-        <img src="/img/logo.png" class="logo" alt="">
+        <img src="../img/logo.png" class="logo" alt="">
       </a>
       <div class="mobileHeader-actions">
         <button class="mobileHeader-action">
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="content">
-    <h2>Розклад тренувань</h2>
+    <h2 class="uppercase">Розклад тренувань</h2>
     <ol type="1">
       <li>Понеділок</li>
       <li>Вівторок</li>
@@ -33,9 +33,25 @@
       <li>Субота</li>
       <li>Неділя</li>
     </ol>
-    <h2>Фітнес-клуб із середини</h2>
-    <img src="/img/gym.jpg" alt="" class="club-image">
-    <h2>Стати учасником клубу</h2>
+    <h2 class="lower">Фітнес-клуб із середини</h2>
+    <img src="../img/gym.jpg" title="фоточка" alt="404" class="club-image">
+
+    <div class="video-container"> 
+      <h2 class="lower">Відео нашого комплексу</h2>
+      <video src="../img/video.mp4" title="sportlife"controls muted autoplay loop></video>
+    </div>
+
+
+
+    <div class="map-container">
+      <h2 class="lower">Місцезнаходження спортзалу</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162260.2973097979!2d30.028332003987558!3d50.54687191116951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b312c515caed3%3A0x6938cfb7e60d03ea!2zU3BvcnQgTGlmZSDQkdGD0YfQsCA6INGC0YDQtdC90LDQttC10YDQvdC40Lkg0LfQsNC7LCDQutCw0YDQtNGW0L7Qt9Cw0LssINC50L7Qs9CwLCDQv9GW0LvQsNGC0LXRgSwg0LzQsNGB0LDQtiwg0YHQvtC70Y_RgNGW0Lku!5e0!3m2!1sen!2sua!4v1726174711299!5m2!1sen!2sua" 
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+
+    <h2 class="lower">Стати учасником клубу</h2>
     <div class="form-container">
       <form action="" method="post">
         <label for="name">Ім'я:
@@ -58,7 +74,7 @@
       </form>
     </div>
   </div>
-  <div class="footer">тут має бути щось цікаве
+  <div class="footer">тут має бути щось цікаве 
   </div>
 </div>
 </body>
