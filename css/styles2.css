@@ -5,7 +5,12 @@
     transition: 0.3s;
 }
 
-html, body {
+ul {
+    list-style: none;
+}
+
+html,
+body {
     height: 100%;
     font-family: "Berlin Sans FB", sans-serif;
     display: flex;
@@ -17,7 +22,6 @@ header {
     text-align: center;
     background-color: black;
     color: aliceblue;
-
 }
 
 main {
@@ -51,7 +55,7 @@ main {
 
 #content {
     padding: 16px;
-    float:right;
+    float: right;
     flex: 5;
     height: 100%;
     border-left: 3px solid black;
@@ -76,16 +80,18 @@ main {
     height: auto;
 }
 
+.gridItem {
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     padding: 30px;
     text-align: center;
     color: aliceblue;
     background-color: black;
-}
-
-footer p {
-    display: inline-block;
-
+    display: flex;
+    justify-content: space-around;
 }
 
 .logo-link {
