@@ -19,15 +19,6 @@
     
 }
 
-.uppercase {
-    text-transform: uppercase;
-}
-
-.lower {
-    text-transform: lowercase;
-}
-
-
 .content {
     flex-grow: 1;
     padding: 20px;
@@ -87,7 +78,7 @@ h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     margin-bottom: 15px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 ol {
