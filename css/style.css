@@ -3,6 +3,7 @@ html,body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -19,6 +20,60 @@ main {
 
 #about-us {
     height: 90vh;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+}
+
+#description {
+    flex: 1;
+}
+
+#description h2 {
+    font-size: 24px;
+    color: dimgray;
+    margin-bottom: 8px;
+}
+
+#description h1 {
+    color: mediumblue;
+    font-size: 56px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#description p {
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 1.6;
+}
+
+.red-button {
+    display: inline-block;
+    background-color: #e60d2e;
+    border: none;
+    border-radius: 15px;
+    width: 50%;
+    height: 8%;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+}
+
+#map img {
+    align-self: center;
 }
 
 .logo-link {
@@ -55,8 +110,6 @@ main {
     width: 50px;
     box-sizing: border-box;
 }
-
-/* footer------------------------------------------------ */
 
 footer {
     padding: 5vh;
