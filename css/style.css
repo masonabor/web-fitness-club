@@ -1,0 +1,66 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 2vh;
+    background-color: black;
+
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+#about-us {
+    height: 90vh;
+}
+
+footer {
+    padding: 10vh;
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-link {
+    display: block;
+    width: 237px;
+    height: 40px;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+
+
+}
+
+.mobileHeader {
+    padding: 13px 6px 13px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: block;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    height: 100%;
+    width: 50px;
+    box-sizing: border-box;
+}
