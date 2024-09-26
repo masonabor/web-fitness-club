@@ -21,15 +21,6 @@ main {
     height: 90vh;
 }
 
-footer {
-    padding: 10vh;
-    text-align: center;
-    color: aliceblue;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-}
-
 .logo-link {
     display: block;
     width: 237px;
@@ -63,4 +54,41 @@ footer {
     height: 100%;
     width: 50px;
     box-sizing: border-box;
+}
+
+/* footer------------------------------------------------ */
+
+footer {
+    padding: 5vh;
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon-link {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    color: #ddd;
 }
