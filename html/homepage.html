@@ -12,61 +12,116 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 <body>
-<header>
+<header> 
     <div class="mobileHeader">
-        <a class="logo-link" href="homepage.html">
-          <img class="logo" src="../img/logo.svg" alt="СпортЛайф">
-        </a>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-    </div>
-</header>
-<main>
-<section id="about-us">
-    <div class="container">
-        <aside id="map" style="flex: 1;">
-            <img src="/img/map.png" alt="Карта">
-        </aside>
-        <aside id="description">
-            <h2>Про нас</h2>
-            <h1>Мережа фітнес-клубів №1 в Україні</h1>
-            <p>Ласкаво просимо в сім'ю Sport Life!</p>
-            <p>
-                Обери клуб, і отримай доступ до необмежених можливостей фітнесу світового стандарту. У тренажерних
-                залах — тільки сучасне обладнання зі США та Італії, понад 200 групових тренувань.
-            </p>
-            <p>
-                Спортивні, розважальні, дитячі басейни оснащені багаторівневою системою очищення води, в SPA-комплексах
-                — римські парні, українські лазні та фінські сауни, салони масажу, солярії та затишні лаунж-зони.
-            </p>
-            <p>Обирай клуб і ставай #я❤️sportlife</p>
-            <a href="">
-                <button class="red-button">Обрати клуб</button>
+        <div class="logo-and-icon">
+            <a class="logo-link" href="homepage.html">
+              <img class="logo" src="../img/logo.svg" alt="СпортЛайф">
             </a>
-        </aside>
+    
+            <div class="icon-container">
+               <img src="../img/bicycle.png" >
+    
+            </div>
+    
+        </div>
+        <div class="hamburger-icon">
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
     </div>
-</section>
-</main>
+    
+</header>
 
-<footer>
-    <p class="footer-title">Будьте з нами на зв'язку</p>
-    <div class="footer-icons">
-        <a href="tel:+380123456789" class="icon-link" title="Подзвонити">
-            <i class="fas fa-phone"></i>
-        </a>
-        <a href="mailto:info@sportlife.com" class="icon-link" title="Відправити Email">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://t.me/yourtelegram" class="icon-link" title="Чат у Telegram">
-            <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://wa.me/380123456789" class="icon-link" title="Чат у WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="viber://chat?number=%2B380123456789" class="icon-link" title="Чат у Viber">
-            <i class="fab fa-viber"></i>
-        </a>
-    </div>
-    <div class="copyright">© 2007–2024 Group of companies Sport Life</div>
-</footer>
+
+
+    <main>
+        <section class="our-clients">
+            <div class="container our-clients-container">
+    
+                <h3 class="main-title">Наші клієнти</h3>
+                <p class="our-clients__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci odio amet consectetur volutpat sodales a
+                    lectus
+                    a. Et gravida tincidunt morbi habitasse. Ultrices magna laoreet ornareLorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Orci odio amet consectetur volutpat sodales a lectus a. Et gravida
+                    tincidunt
+                    morbi habitasse
+                </p>
+                <div class="our-clients-photos">
+                    <img src="../img/cat2.jpg" alt="error">
+                    <img src="../img/suggar_mommy.jpg" alt="error">
+                    <img src="../img/sweaty_man.jpg" alt="error">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about-us">
+            <div class="container">
+                <aside id="map" style="flex: 1;">
+                    <img src="/img/map.png" alt="Карта">
+                </aside>
+                <aside id="description">
+                    <h2>Про нас</h2>
+                    <h1>Мережа фітнес-клубів №1 в Україні</h1>
+                    <p>Ласкаво просимо в сім'ю Sport Life!</p>
+                    <p>
+                        Обери клуб, і отримай доступ до необмежених можливостей фітнесу світового стандарту. У тренажерних
+                        залах — тільки сучасне обладнання зі США та Італії, понад 200 групових тренувань.
+                    </p>
+                    <p>
+                        Спортивні, розважальні, дитячі басейни оснащені багаторівневою системою очищення води, в SPA-комплексах
+                        — римські парні, українські лазні та фінські сауни, салони масажу, солярії та затишні лаунж-зони.
+                    </p>
+                    <p>Обирай клуб і ставай #я❤️sportlife</p>
+                    <a href="">
+                        <button class="red-button">Обрати клуб</button>
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h4 class="contact-section__title">Контакти</h4>
+            <p class="contact-section__gmail">contact@email.com</p>
+            <p class="contact-section__phone">+0 000 000</p>
+        
+        </section>
+        </main>
+
+
+
+
+
+
+
+
+
+        <footer>
+            
+            <div class="footer-content">
+                <p>Будьте з нами на зв'язку</p>
+                <div class="footer-icons">
+                    <a href="tel:+380123456789" class="icon-link" title="Подзвонити">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="mailto:info@sportlife.com" class="icon-link" title="Відправити Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://t.me/yourtelegram" class="icon-link" title="Чат у Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://wa.me/380123456789" class="icon-link" title="Чат у WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="viber://chat?number=%2B380123456789" class="icon-link" title="Чат у Viber">
+                        <i class="fab fa-viber"></i>
+                    </a>
+                    
+                </div>
+                <div class="copyright">© 2007–2024 Group of companies Sport Life</div>
+            </div>
+            
+        </footer>
 </body>
 </html>

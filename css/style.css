@@ -3,8 +3,6 @@ html,body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
 }
 
 header {
@@ -12,14 +10,14 @@ header {
     background-color: black;
 
 }
-
+/* about us ---------------------------------------------start*/
 main {
     min-height: auto;
 }
 
 #about-us {
     height: 90vh;
-    padding-top: 50px;
+    margin-bottom: 350px;
 }
 
 .container {
@@ -37,7 +35,7 @@ main {
 #description h2 {
     font-size: 24px;
     color: dimgray;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 #description h1 {
@@ -66,6 +64,13 @@ main {
     font-weight: bold;
     margin-top: 18px;
     cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+
+}
+
+.red-button:hover {
+    transform: scale(1.1); /* збільшує кнопочку */
+    background-color: #ff4b5c; /* трішки світлішим стає */
 }
 
 #map {
@@ -77,7 +82,12 @@ main {
     align-self: center;
 }
 
+
+/* about us ---------------------------------------------end*/
+
+/* header ---------------------------------------------start*/
 .logo-link {
+    margin-right: 20px; /* Відступ між логотипом та іконкою */
     display: block;
     width: 237px;
     height: 40px;
@@ -87,10 +97,32 @@ main {
 .logo {
     max-height: 100%;
     max-width: 100%;
+    height: auto;
+    width: auto;
+
 
 }
 
+.icon-container{
+    margin-left: 20px; /* Відступ зліва від .logo-link */
+
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+@keyframes heartbeat {
+    0%,100%{
+        transform: scale(1);
+    } 50% {
+        transform: scale(1.3);
+    }
+}
+
 .mobileHeader {
+    padding: 13px 6px 13px 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-and-icon{
     padding: 13px 6px 13px 13px;
     display: flex;
     align-items: center;
@@ -109,17 +141,114 @@ main {
     box-sizing: border-box;
 }
 
+/* header ---------------------------------------------end*/
+
+/* our clients section-----------start*/
+
+.main-title{
+    font-size: 24px;
+    text-align: center;
+    color: dimgray;
+}
+
+
+
+.our-clients-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальне вирівнювання по центру */
+    align-items: center; /* Горизонтальне вирівнювання по центру */
+    height: 100vh; /* Встановлює висоту контейнера на всю висоту вікна */
+    margin-top: 30px;
+}
+
+.our-clients__title {
+    margin-bottom: 55px;
+    text-align: center;
+    
+}
+
+.our-clients__text {
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 95.52%;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 98vw;
+    box-sizing: border-box; /*робить шоб був правильний облік відступів у ширині */
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+.our-clients-photos {
+    display: flex;
+    justify-content: space-around; /* This will space the images evenly */
+    align-items: center;
+    gap: 20px;
+    padding: 20PX;
+    
+}
+
+.our-clients-photos img {
+    width: 430px; /* Встановлюємо однакову ширину для всіх зображень */
+    height: 500px; /* Встановлюємо однакову висоту для всіх зображень */
+    object-fit: cover; /* Зберігає пропорції зображень, при цьому обрізаючи їх, якщо вони не підходять */
+    border-radius: 5px; /* Опціонально: додає трохи закруглені кути */
+}
+
+
+/* our clients section-----------end */
+
+/* contact section ----------------------start */
+
+
+.contact-section__title {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 95.52%;
+    text-align: center;
+    color: #000000;
+    /* margin-top: 320.91px; */
+    /* margin-bottom: 122.63px; */
+}
+
+.contact-section__gmail {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 95.52%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+.contact-section__phone {
+    font-weight: 400;
+    font-size:46px;
+    line-height: 95.52%;
+    text-align: center;
+    color: #000000;
+}
+
+/* contact section ----------------------end */
+
+/* footer------------------------------------------------ */
 footer {
-    padding: 2vh;
+    padding: 5vh;
+    text-align: center;
     color: aliceblue;
     background-color: black;
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer-title {
-    font-size: 20px;
+    font-size: 24px;
     color: white;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 .footer-icons {
@@ -142,4 +271,8 @@ footer {
     font-size: 12px;
     line-height: 1.33;
     font-weight: 400;
+    
 }
+
+/* footer------------------------------------------------end */
+
