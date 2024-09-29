@@ -3,6 +3,7 @@ html,body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -15,9 +16,16 @@ main {
     min-height: auto;
 }
 
+video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
 #about-us {
     height: 90vh;
-    margin-bottom: 350px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 .container {
@@ -32,14 +40,13 @@ main {
     flex: 1;
 }
 
-#description h2 {
+h2 {
     font-size: 24px;
     color: dimgray;
     margin-bottom: 20px;
 }
 
-#description h1 {
-    color: mediumblue;
+h1 {
     font-size: 56px;
     font-weight: bold;
     margin-top: 5px;
@@ -82,15 +89,58 @@ main {
     align-self: center;
 }
 
+/* our services ---------------------------------------start*/
+#our-services {
+    min-height: 90vh;
+    background-color: black;
+    padding: 100px 170px;
+}
+
+.swiper-wrapper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the slider and buttons */
+    position: relative;
+}
+
+.swiper-container {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 800px; /* You can limit the width */
+    margin: 0 auto; /* Center the slider */
+}
+
+.swiper-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Make the buttons span the full width */
+    max-width: 800px; /* Same as slider */
+    margin-top: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: white; /* Ensure the buttons are visible */
+    font-size: 24px; /* Adjust size if needed */
+    cursor: pointer;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+
+/* our services ---------------------------------------start*/
 
 /* about us ---------------------------------------------end*/
 
 /* header ---------------------------------------------start*/
 .logo-link {
-    margin-right: 20px; /* Відступ між логотипом та іконкою */
+    margin-right: 30px; /* Відступ між логотипом та іконкою */
     display: block;
-    width: 237px;
-    height: 40px;
+    height: 60px;
     align-items: center;
 }
 

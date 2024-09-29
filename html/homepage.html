@@ -6,38 +6,45 @@
     <title>Спорт - це життя!</title>
     <meta name="keywords" content=""/>
     <meta name="authors" content="Мартинюк Юрій, Маляревич Анжела"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <meta name="description" content="Веб-сайт спортивного залу СпортЛайф"/>
     <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="icon" href="https://r2.sportlife.ua/Site_logo_ua_58_56_8e856f9af6.svg"/>
+    <link rel="icon" href="/img/Trenbolone.jpeg"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 </head>
 <body>
-<header> 
+<header>
     <div class="mobileHeader">
         <div class="logo-and-icon">
             <a class="logo-link" href="homepage.html">
-              <img class="logo" src="../img/logo.svg" alt="СпортЛайф">
+              <img class="logo" src="../img/tren.jpg" alt="СпортЛайф">
             </a>
-    
+
             <div class="icon-container">
-               <img src="../img/bicycle.png" >
-    
+               <img src="../img/bicycle.png" alt="bicycle">
+
             </div>
-    
+
         </div>
         <div class="hamburger-icon">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
         </div>
     </div>
-    
+
 </header>
 
 
 
     <main>
+        <section id="video">
+            <video src="/video/testosterone_boost.mp4" autoplay loop muted></video>
+        </section>
+
         <section class="our-clients">
             <div class="container our-clients-container">
-    
+
                 <h3 class="main-title">Наші клієнти</h3>
                 <p class="our-clients__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci odio amet consectetur volutpat sodales a
@@ -56,6 +63,96 @@
         </section>
 
 
+        <section id="our-services">
+            <h2 style="color: white">Наші послуги</h2>
+            <h1 style="color: white">Популярні послуги</h1>
+
+            <div class="swiper-wrapper-container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="../img/service1.jpg" alt="Service 1" style="width: 100%; height: 200px; object-fit: cover;">
+                            <h3>Тренажерний зал</h3>
+                            <p>Сучасні тренажери зі США та Італії</p>
+                            <a href="service1.html">
+                                <button class="red-button">Дізнатись більше</button>
+                            </a>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <img src="../img/service2.jpg" alt="Service 2" style="width: 100%; height: 200px; object-fit: cover;">
+                            <h3>Басейн</h3>
+                            <p>Сучасні басейни з системою очищення води</p>
+                            <a href="service2.html">
+                                <button class="red-button">Дізнатись більше</button>
+                            </a>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <img src="../img/service3.jpg" alt="Service 3" style="width: 100%; height: 200px; object-fit: cover;">
+                            <h3>Групові заняття</h3>
+                            <p>Понад 200 групових тренувань на будь-який смак</p>
+                            <a href="service3.html">
+                                <button class="red-button">Дізнатись більше</button>
+                            </a>
+                        </div>
+
+                        <!-- Slide 4 (New Slide Example) -->
+                        <div class="swiper-slide">
+                            <img src="../img/service4.jpg" alt="Service 4" style="width: 100%; height: 200px; object-fit: cover;">
+                            <h3>Персональні тренування</h3>
+                            <p>Отримайте індивідуальні консультації з тренером</p>
+                            <a href="service4.html">
+                                <button class="red-button">Дізнатись більше</button>
+                            </a>
+                        </div>
+
+                        <!-- Slide 5 (New Slide Example) -->
+                        <div class="swiper-slide">
+                            <img src="../img/service5.jpg" alt="Service 5" style="width: 100%; height: 200px; object-fit: cover;">
+                            <h3>Йога</h3>
+                            <p>Розслабтесь та знайдіть баланс з нашими йога-класами</p>
+                            <a href="service5.html">
+                                <button class="red-button">Дізнатись більше</button>
+                            </a>
+                        </div>
+
+                        <!-- Add more slides as needed -->
+
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-navigation">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Swiper Initialization Script -->
+        <script>
+            new Swiper('.swiper-container', {
+                loop: true,
+                slidesPerView: 1, // Show one slide fully
+                spaceBetween: 30, // Add space between slides
+                navigation: {
+                    nextEl: '.swiper-button-next', // Ensure buttons are linked correctly
+                    prevEl: '.swiper-button-prev',
+                },
+                initialSlide: 0, // Start with the first slide (adjust if needed)
+            });
+        </script>
+
+
+
+
         <section id="about-us">
             <div class="container">
                 <aside id="map" style="flex: 1;">
@@ -63,7 +160,7 @@
                 </aside>
                 <aside id="description">
                     <h2>Про нас</h2>
-                    <h1>Мережа фітнес-клубів №1 в Україні</h1>
+                    <h1 style="color: mediumblue">Мережа фітнес-клубів №1 в Україні</h1>
                     <p>Ласкаво просимо в сім'ю Sport Life!</p>
                     <p>
                         Обери клуб, і отримай доступ до необмежених можливостей фітнесу світового стандарту. У тренажерних
@@ -85,7 +182,7 @@
             <h4 class="contact-section__title">Контакти</h4>
             <p class="contact-section__gmail">contact@email.com</p>
             <p class="contact-section__phone">+0 000 000</p>
-        
+
         </section>
         </main>
 
@@ -98,7 +195,7 @@
 
 
         <footer>
-            
+
             <div class="footer-content">
                 <p>Будьте з нами на зв'язку</p>
                 <div class="footer-icons">
@@ -117,11 +214,11 @@
                     <a href="viber://chat?number=%2B380123456789" class="icon-link" title="Чат у Viber">
                         <i class="fab fa-viber"></i>
                     </a>
-                    
+
                 </div>
                 <div class="copyright">© 2007–2024 Group of companies Sport Life</div>
             </div>
-            
+
         </footer>
 </body>
 </html>
