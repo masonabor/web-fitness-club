@@ -206,6 +206,12 @@ h1 {
     justify-content: space-between;
 }
 
+.hamburger-icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 50px;
+}
+
 .hamburger {
     display: block;
     font-size: 40px;
@@ -216,6 +222,33 @@ h1 {
     height: 100%;
     width: 50px;
     box-sizing: border-box;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-child {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: black;
+    min-width: 200px;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    opacity: 1;
+    max-height: 500px; /* встановіть це значення залежно від висоти вмісту */
 }
 
 /* header ---------------------------------------------end*/
@@ -317,7 +350,6 @@ footer {
 
 .footer-icons {
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -332,9 +364,11 @@ footer {
 }
 
 .footer .copyright {
+    float: left;
     font-size: 12px;
     line-height: 1.33;
     font-weight: 400;
+
     
 }
 
