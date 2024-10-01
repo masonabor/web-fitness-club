@@ -18,18 +18,19 @@ main {
 
 video {
     width: 100%;
-    max-height: 500px;
+    max-height: 700px;
     object-fit: cover;
 }
 
 #about-us {
-    height: 90vh;
+    height: 85vh;
     margin-bottom: 100px;
     margin-top: 100px;
 }
 
 .container {
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     display: flex;
@@ -71,7 +72,7 @@ h1 {
     font-weight: bold;
     margin-top: 18px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
 }
 
@@ -90,8 +91,9 @@ h1 {
 }
 
 /* our services ---------------------------------------start*/
+
 #our-services {
-    min-height: 90vh;
+    min-height: 60vh;
     background-color: black;
     padding: 100px 170px;
 }
@@ -104,7 +106,7 @@ h1 {
 }
 
 .swiper-container {
-    width: 80%; /* Adjust the width as needed */
+    width: auto; /* Adjust the width as needed */
     max-width: 800px; /* You can limit the width */
     margin: 0 auto; /* Center the slider */
 }
@@ -131,8 +133,28 @@ h1 {
     left: 0;
 }
 
+.swiper-slide img {
+    min-height: 600px;
+}
 
-/* our services ---------------------------------------start*/
+.swiper-slide h3 {
+    color: white;
+    font-size: 42px;
+}
+
+.swiper-slide p {
+    color: white;
+    font-size: 30px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* our services -----------------------------------------end*/
 
 /* about us ---------------------------------------------end*/
 
@@ -140,7 +162,7 @@ h1 {
 .logo-link {
     margin-right: 30px; /* Відступ між логотипом та іконкою */
     display: block;
-    height: 60px;
+    height: 90px;
     align-items: center;
 }
 
@@ -149,15 +171,20 @@ h1 {
     max-width: 100%;
     height: auto;
     width: auto;
+    border-radius: 10px;
 
 
 }
 
 .icon-container{
-    margin-left: 20px; /* Відступ зліва від .logo-link */
-
+    margin-left: 40px; /* Відступ зліва від .logo-link */
     animation: heartbeat 1.5s ease-in-out infinite;
 }
+
+.icon-container img {
+    min-height: 70px;
+}
+
 @keyframes heartbeat {
     0%,100%{
         transform: scale(1);
@@ -195,20 +222,11 @@ h1 {
 
 /* our clients section-----------start*/
 
-.main-title{
-    font-size: 24px;
-    text-align: center;
-    color: dimgray;
-}
-
-
-
 .our-clients-container {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Вертикальне вирівнювання по центру */
-    align-items: center; /* Горизонтальне вирівнювання по центру */
-    height: 100vh; /* Встановлює висоту контейнера на всю висоту вікна */
+    height: 80vh; /* Встановлює висоту контейнера на всю висоту вікна */
     margin-top: 30px;
 }
 
@@ -226,24 +244,22 @@ h1 {
     margin-bottom: 40px;
     width: 98vw;
     box-sizing: border-box; /*робить шоб був правильний облік відступів у ширині */
-    padding-left: 20px; 
-    padding-right: 20px; 
+    padding: 0 170px 0 170px;
 }
 
 .our-clients-photos {
     display: flex;
     justify-content: space-around; /* This will space the images evenly */
     align-items: center;
-    gap: 20px;
-    padding: 20PX;
-    
+    width: 100%;
 }
 
 .our-clients-photos img {
     width: 430px; /* Встановлюємо однакову ширину для всіх зображень */
     height: 500px; /* Встановлюємо однакову висоту для всіх зображень */
     object-fit: cover; /* Зберігає пропорції зображень, при цьому обрізаючи їх, якщо вони не підходять */
-    border-radius: 5px; /* Опціонально: додає трохи закруглені кути */
+    border-radius: 15px; /* Опціонально: додає трохи закруглені кути */
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -258,8 +274,6 @@ h1 {
     line-height: 95.52%;
     text-align: center;
     color: #000000;
-    /* margin-top: 320.91px; */
-    /* margin-bottom: 122.63px; */
 }
 
 .contact-section__gmail {

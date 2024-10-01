@@ -1,16 +1,10 @@
 new Swiper('.swiper-container', {
-    loop: true, // Бескінечний режим
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+    loop: true,
+    slidesPerView: 1, // Show one slide fully
+    spaceBetween: 850, // Add space between slides
     navigation: {
-        nextEl: '.swiper-button-next',
+        nextEl: '.swiper-button-next', // Ensure buttons are linked correctly
         prevEl: '.swiper-button-prev',
     },
-    slidesPerView: 3, // Кількість видимих слайдів
-    spaceBetween: 20, // Відстань між слайдами
-    autoplay: {
-        delay: 5000, // Автоматична зміна кожні 5 секунд
-    },
+    initialSlide: 0, // Start with the first slide (adjust if needed)
 });
