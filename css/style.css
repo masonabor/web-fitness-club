@@ -113,7 +113,7 @@ header {
 /* Main Video Section ---------------------------------- start */
 video {
     width: 100%;
-    max-height: 700px;
+    max-height: 500px;
     object-fit: cover;
 }
 /* Main Video Section ---------------------------------- end */
@@ -123,8 +123,10 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Вертикальне вирівнювання по центру */
-    height: 80vh; /* Встановлює висоту контейнера на всю висоту вікна */
-    margin-top: 30px;
+    margin: 30px 0;
+    width: 100%;
+
+
 }
 
 .our-clients__title {
@@ -134,7 +136,8 @@ video {
 
 .our-clients__text {
     font-weight: 100;
-    font-size: 25px;
+    font-size: 1.3vw;
+    min-font-size: 16px;
     line-height: 95.52%;
     text-align: center;
     margin-bottom: 40px;
@@ -151,9 +154,9 @@ video {
 }
 
 .our-clients-photos img {
-    width: 100%;
+    width: 20vw;
+    height: 25vw;
     max-width: 430px;
-    height: 500px; /* Встановлюємо однакову висоту для всіх зображень */
     object-fit: cover; /* Зберігає пропорції зображень, при цьому обрізаючи їх, якщо вони не підходять */
     border-radius: 15px; /* Опціонально: додає трохи закруглені кути */
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
@@ -175,7 +178,7 @@ video {
 }
 
 .swiper-container {
-    width: auto; /* Adjust the width as needed */
+    width: 30vw; /* Adjust the width as needed */
     max-width: 800px; /* You can limit the width */
     margin: 0 auto; /* Center the slider */
 }
@@ -202,30 +205,25 @@ video {
     left: 0;
 }
 
-.swiper-slide img {
-    min-height: 600px;
-}
-
 .swiper-slide h3 {
     color: white;
-    font-size: 42px;
+    font-size: 2.3vw;
 }
 
 .swiper-slide p {
     color: white;
-    font-size: 30px;
+    font-size: 1.3vw;
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: 200px;
+    width: 30vw;
+    height: 25vw;
     object-fit: cover;
 }
 /* Our Services Section -------------------------------- end */
 
 /* About Us Section ------------------------------------ start */
 #about-us {
-    height: 85vh;
     margin-bottom: 100px;
     margin-top: 100px;
 }
@@ -243,13 +241,13 @@ video {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 1.3vw;
     color: dimgray;
     margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 2.3vw;
     font-weight: bold;
     margin-top: 5px;
     margin-left: 5px;
@@ -257,7 +255,7 @@ h1 {
 
 #description p {
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 1.3vw;
     line-height: 1.6;
 }
 
@@ -288,6 +286,7 @@ h1 {
 
 #map img {
     align-self: center;
+    width: 45vw;
 }
 /* About Us Section ------------------------------------ end */
 
@@ -336,10 +335,10 @@ footer {
 
 /* adaptive -------------------------------------------- start */
 
-@media (max-width: 431px) {
+@media (max-width: 1000px) {
     /* Header */
     .mobileHeader {
-        padding: 0px;
+        padding: 0;
         flex-direction: row; /* Зміна напрямку на рядок */
         align-items: center;
         justify-content: space-between; /* Додаємо простір між елементами */
@@ -413,14 +412,10 @@ footer {
         max-width: 400px; /* Зменшити ширину слайдера */
     }
 
-    .swiper-slide img {
-        height: 150px; /* Зменшити висоту картинок */
-    }
 
     /* About Us Section */
     #about-us {
         display: flex;
-        flex-direction: column;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -445,11 +440,6 @@ footer {
         width: 80%;
         height: 50px; /* Зменшити кнопки */
         font-size: 18px;
-    }
-
-    /* Map - приховуємо */
-    #map {
-        display: none; /* Приховати карту на мобільних пристроях */
     }
 
     /* Footer */
