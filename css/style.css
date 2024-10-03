@@ -1,97 +1,166 @@
-html,body {
+/* Global Styles -------------------------------------------- start */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
 }
+/* Global Styles -------------------------------------------- end */
 
+/* Header --------------------------------------------- start */
 header {
     padding: 2vh;
     background-color: black;
-
-}
-/* about us ---------------------------------------------start*/
-main {
-    min-height: auto;
 }
 
+.logo-link {
+    margin-right: 30px; /* Відступ між логотипом та іконкою */
+    display: block;
+    height: 90px;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+
+.icon-container {
+    margin-left: 40px; /* Відступ зліва від .logo-link */
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.icon-container img {
+    min-height: 70px;
+}
+
+@keyframes heartbeat {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+.mobileHeader {
+    padding: 13px 6px 13px 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-and-icon {
+    padding: 13px 6px 13px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger-icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 50px;
+}
+
+.hamburger {
+    display: block;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    height: 100%;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-child {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: black;
+    min-width: 200px;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    opacity: 1;
+    max-height: 500px; /* встановіть це значення залежно від висоти вмісту */
+}
+/* Header --------------------------------------------- end */
+
+/* Main Video Section ---------------------------------- start */
 video {
     width: 100%;
     max-height: 700px;
     object-fit: cover;
 }
+/* Main Video Section ---------------------------------- end */
 
-#about-us {
-    height: 85vh;
-    margin-bottom: 100px;
-    margin-top: 100px;
+/* Our Clients Section --------------------------------- start */
+.our-clients-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальне вирівнювання по центру */
+    height: 80vh; /* Встановлює висоту контейнера на всю висоту вікна */
+    margin-top: 30px;
 }
 
-.container {
+.our-clients__title {
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.our-clients__text {
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 95.52%;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 98vw;
+    box-sizing: border-box; /* робить шоб був правильний облік відступів у ширині */
+    padding: 0 170px 0 170px;
+}
+
+.our-clients-photos {
+    display: flex;
+    justify-content: space-around; /* This will space the images evenly */
+    align-items: center;
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: flex;
-
 }
 
-#description {
-    flex: 1;
+.our-clients-photos img {
+    width: 100%;
+    max-width: 430px;
+    height: 500px; /* Встановлюємо однакову висоту для всіх зображень */
+    object-fit: cover; /* Зберігає пропорції зображень, при цьому обрізаючи їх, якщо вони не підходять */
+    border-radius: 15px; /* Опціонально: додає трохи закруглені кути */
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
 }
+/* Our Clients Section --------------------------------- end */
 
-h2 {
-    font-size: 24px;
-    color: dimgray;
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 56px;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-
-#description p {
-    margin-top: 20px;
-    font-size: 28px;
-    line-height: 1.6;
-}
-
-.red-button {
-    display: inline-block;
-    background-color: #e60d2e;
-    border: none;
-    border-radius: 15px;
-    width: 50%;
-    height: 8%;
-    font-size: 28px;
-    color: white;
-    font-weight: bold;
-    margin-top: 18px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-
-}
-
-.red-button:hover {
-    transform: scale(1.1); /* збільшує кнопочку */
-    background-color: #ff4b5c; /* трішки світлішим стає */
-}
-
-#map {
-    display: flex;
-    justify-content: center;
-}
-
-#map img {
-    align-self: center;
-}
-
-/* our services ---------------------------------------start*/
-
+/* Our Services Section -------------------------------- start */
 #our-services {
     min-height: 60vh;
     background-color: black;
@@ -152,183 +221,77 @@ h1 {
     height: 200px;
     object-fit: cover;
 }
+/* Our Services Section -------------------------------- end */
 
-
-/* our services -----------------------------------------end*/
-
-/* about us ---------------------------------------------end*/
-
-/* header ---------------------------------------------start*/
-.logo-link {
-    margin-right: 30px; /* Відступ між логотипом та іконкою */
-    display: block;
-    height: 90px;
-    align-items: center;
+/* About Us Section ------------------------------------ start */
+#about-us {
+    height: 85vh;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
-.logo {
-    max-height: 100%;
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    border-radius: 10px;
-
-
-}
-
-.icon-container{
-    margin-left: 40px; /* Відступ зліва від .logo-link */
-    animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-.icon-container img {
-    min-height: 70px;
-}
-
-@keyframes heartbeat {
-    0%,100%{
-        transform: scale(1);
-    } 50% {
-        transform: scale(1.3);
-    }
-}
-
-.mobileHeader {
-    padding: 13px 6px 13px 13px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo-and-icon{
-    padding: 13px 6px 13px 13px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hamburger-icon {
-    display: flex;
-    justify-content: flex-end;
-    width: 50px;
-}
-
-.hamburger {
-    display: block;
-    font-size: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    height: 100%;
-    width: 50px;
-    box-sizing: border-box;
-}
-
-.dropdown {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-child {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    background-color: black;
-    min-width: 200px;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-.dropdown-child a {
-    color: white;
-    padding: 20px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-child {
-    opacity: 1;
-    max-height: 500px; /* встановіть це значення залежно від висоти вмісту */
-}
-
-/* header ---------------------------------------------end*/
-
-/* our clients section-----------start*/
-
-.our-clients-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Вертикальне вирівнювання по центру */
-    height: 80vh; /* Встановлює висоту контейнера на всю висоту вікна */
-    margin-top: 30px;
-}
-
-.our-clients__title {
-    margin-bottom: 55px;
-    text-align: center;
-    
-}
-
-.our-clients__text {
-    font-weight: 100;
-    font-size: 25px;
-    line-height: 95.52%;
-    text-align: center;
-    margin-bottom: 40px;
-    width: 98vw;
-    box-sizing: border-box; /*робить шоб був правильний облік відступів у ширині */
-    padding: 0 170px 0 170px;
-}
-
-.our-clients-photos {
-    display: flex;
-    justify-content: space-around; /* This will space the images evenly */
-    align-items: center;
+.container {
     width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
 }
 
-.our-clients-photos img {
-    width: 430px; /* Встановлюємо однакову ширину для всіх зображень */
-    height: 500px; /* Встановлюємо однакову висоту для всіх зображень */
-    object-fit: cover; /* Зберігає пропорції зображень, при цьому обрізаючи їх, якщо вони не підходять */
-    border-radius: 15px; /* Опціонально: додає трохи закруглені кути */
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
+#description {
+    flex: 1;
 }
 
-
-/* our clients section-----------end */
-
-/* contact section ----------------------start */
-
-
-.contact-section__title {
-    font-weight: 400;
-    font-size: 46px;
-    line-height: 95.52%;
-    text-align: center;
-    color: #000000;
+h2 {
+    font-size: 24px;
+    color: dimgray;
+    margin-bottom: 20px;
 }
 
-.contact-section__gmail {
-    font-weight: 400;
-    font-size: 46px;
-    line-height: 95.52%;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 6px;
+h1 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
-.contact-section__phone {
-    font-weight: 400;
-    font-size:46px;
-    line-height: 95.52%;
-    text-align: center;
-    color: #000000;
+#description p {
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 1.6;
 }
 
-/* contact section ----------------------end */
+.red-button {
+    display: inline-block;
+    background-color: #e60d2e;
+    border: none;
+    border-radius: 15px;
+    width: 50%;
+    height: 8%;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    margin-top: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-/* footer------------------------------------------------ */
+.red-button:hover {
+    transform: scale(1.1); /* збільшує кнопочку */
+    background-color: #ff4b5c; /* трішки світлішим стає */
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+}
+
+#map img {
+    align-self: center;
+}
+/* About Us Section ------------------------------------ end */
+
+/* Footer ---------------------------------------------- start */
 footer {
     padding: 5vh;
     text-align: center;
@@ -368,9 +331,134 @@ footer {
     font-size: 12px;
     line-height: 1.33;
     font-weight: 400;
-
-    
 }
+/* Footer ---------------------------------------------- end */
 
-/* footer------------------------------------------------end */
+/* adaptive -------------------------------------------- start */
+
+@media (max-width: 431px) {
+    /* Header */
+    .mobileHeader {
+        padding: 0px;
+        flex-direction: row; /* Зміна напрямку на рядок */
+        align-items: center;
+        justify-content: space-between; /* Додаємо простір між елементами */
+        
+    }
+
+    .logo-and-icon {
+        flex-direction: row; /* Розташування в рядок */
+        align-items: center; /* Вирівнюємо елементи по центру вертикально */
+    }
+
+    .logo-link {
+        width: 200px;
+    }
+
+    .logo {
+
+        max-width: 100%;
+        height: auto;
+        width: auto;
+ 
+    }
+
+    .hamburger {
+        font-size: 30px;
+        color: rgb(255, 0, 0);
+        display: none;
+        
+   
+    }
+
+    .icon-container img {
+        /* display: none; */
+    }
+
+    /* Main Video Section */
+    video {
+        max-height: 300px;
+    }
+
+    /* Our Clients Section */
+    .our-clients-container {
+        height: auto; /* Висота буде автоматично підлаштовуватися */
+        padding: 0 10px; /* Зменшення відступів */
+    }
+
+    .our-clients__text {
+        font-size: 16px;
+        padding: 0 20px; /* Зменшення внутрішнього відступу */
+    }
+
+    .our-clients-photos {
+        display: flex;
+        flex-wrap: wrap; /* Додаємо можливість переносу рядків */
+        justify-content: space-between; /* Додаємо простір між зображеннями */
+    }
+
+    .our-clients-photos img {
+        width: 48%; /* Задаємо ширину для двох зображень в ряд */
+        height: 200px; /* Зменшення зображень */
+        margin-bottom: 10px; /* Відступ між рядками зображень */
+    }
+
+    /* Our Services Section */
+    #our-services {
+        padding: 50px 10px; /* Зменшення внутрішніх відступів */
+    }
+
+    .swiper-container {
+        width: 100%;
+        max-width: 400px; /* Зменшити ширину слайдера */
+    }
+
+    .swiper-slide img {
+        height: 150px; /* Зменшити висоту картинок */
+    }
+
+    /* About Us Section */
+    #about-us {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #description {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 36px; /* Зменшити заголовки */
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #description p {
+        font-size: 16px; /* Зменшити розмір тексту */
+    }
+
+    .red-button {
+        width: 80%;
+        height: 50px; /* Зменшити кнопки */
+        font-size: 18px;
+    }
+
+    /* Map - приховуємо */
+    #map {
+        display: none; /* Приховати карту на мобільних пристроях */
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+    }
+
+    .footer-icons {
+        gap: 10px; /* Зменшення відступів між іконками */
+    }
+}
 
