@@ -181,6 +181,7 @@ video {
     width: 30vw; /* Adjust the width as needed */
     max-width: 800px; /* You can limit the width */
     margin: 0 auto; /* Center the slider */
+    overflow: hidden;
 }
 
 .swiper-navigation {
@@ -407,9 +408,27 @@ footer {
         padding: 50px 10px; /* Зменшення внутрішніх відступів */
     }
 
+    .swiper-wrapper-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the slider and buttons */
+        position: relative;
+    }
+
     .swiper-container {
-        width: 100%;
+        width: 70%;
         max-width: 400px; /* Зменшити ширину слайдера */
+        overflow: hidden;
+    }
+
+    .swiper-slide h3 {
+        color: white;
+        font-size: 24px;
+    }
+
+    .swiper-slide p {
+        color: white;
+        font-size: 18px;
     }
 
 
@@ -418,6 +437,7 @@ footer {
         display: flex;
         margin-top: 50px;
         margin-bottom: 50px;
+        flex-wrap: wrap;
     }
 
     #description {
