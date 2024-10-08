@@ -336,7 +336,7 @@ footer {
 
 /* adaptive -------------------------------------------- start */
 
-@media (max-width: 1000px) {
+@media (max-width: 430px) {
     /* Header */
     .mobileHeader {
         padding: 0;
