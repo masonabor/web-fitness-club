@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+/* Global Styles -------------------------------------------- end */
+
+/* Header --------------------------------------------- start */
+header {
+    padding: 2vh;
+    background-color: black;
+}
+
+.logo-link {
+    margin-right: 30px; /* Відступ між логотипом та іконкою */
+    display: block;
+    height: 90px;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+}
+
+.icon-container {
+    margin-left: 40px; /* Відступ зліва від .logo-link */
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.icon-container img {
+    min-height: 70px;
+}
+
+@keyframes heartbeat {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+.mobileHeader {
+    padding: 13px 6px 13px 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-and-icon {
+    padding: 13px 6px 13px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger-icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 50px;
+}
+
+.hamburger {
+    display: block;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    height: 100%;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-child {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: black;
+    min-width: 200px;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    opacity: 1;
+    max-height: 500px; /* встановіть це значення залежно від висоти вмісту */
+}
+
+footer {
+    padding: 10px;
+    color: aliceblue;
+    background-color: black;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.icon-link {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    color: #ddd;
+}
+
+.footer .copyright {
+    float: left;
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 400;
+}
+
+@media (max-width: 435px) {
+
+    .mobileHeader {
+        padding: 0;
+    }
+
+    .hamburger-icon {
+        padding-right: 10px;
+    }
+
+    .hamburger {
+        font-size: 25px;
+    }
+
+    .dropdown-child {
+        min-width: 100px;
+    }
+
+    .logo-and-icon {
+        padding: 0;
+    }
+
+    .logo-link {
+        display: block;
+        margin-right: 10px;
+        width: 100px;
+        height: auto;
+    }
+
+    .icon-container {
+        margin-left: 10px;
+        animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    .icon-container img {
+        min-height: 30px;
+    }
+
+    .dropdown-child a {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .footer-icons {
+        gap: 15px;
+    }
+
+    .icon-link {
+        font-size: 18px;
+    }
+}
