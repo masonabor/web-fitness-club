@@ -137,7 +137,6 @@ video {
 .our-clients__text {
     font-weight: 100;
     font-size: 1.3vw;
-    min-font-size: 16px;
     line-height: 95.52%;
     text-align: center;
     margin-bottom: 40px;
@@ -364,9 +363,6 @@ footer {
  
     }
 
-    .icon-container img {
-        /* display: none; */
-    }
 
     /* Main Video Section */
     video {
@@ -449,7 +445,7 @@ footer {
     }
 
     .red-button {
-        width: 80%;
+        width: 90%;
         height: 50px; /* Зменшити кнопки */
         font-size: 18px;
     }
