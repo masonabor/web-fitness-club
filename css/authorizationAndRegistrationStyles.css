@@ -104,26 +104,29 @@ header {
 
 .dropdown:hover .dropdown-child {
     opacity: 1;
-    max-height: 500px; /* встановіть це значення залежно від висоти вмісту */
+    max-height: 500px;
 }
 
 main {
-    height: 70vh;
+    height: auto;
+    margin: 5vw 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main section {
-
+.section-main {
+    height: 70vh;
+    display: flex;
+    align-items: center;
 }
 
 form {
     display: inline-block;
     text-align: left;
     padding: 20px;
-    min-height: 350px;
-    min-width: 400px;
+    height: auto;
+    width: 30vw;
     margin: 0 auto;
     border-radius: 10px;
     background-color: darkgray;
@@ -139,7 +142,11 @@ label {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"],
+input[type="date"],
+input[type="file"],
+select {
     width: 100%;
     padding: 10px;
     margin: 10px 0 20px 0;
@@ -215,94 +222,3 @@ footer {
     font-weight: 400;
 }
 
-@media (max-width: 435px) {
-
-    .mobileHeader {
-        padding: 0;
-    }
-
-    .hamburger-icon {
-        padding-right: 25px;
-    }
-
-    .dropdown-child {
-        min-width: 100px;
-    }
-
-    .logo-and-icon {
-        padding: 0;
-    }
-
-    .logo-link {
-        display: block;
-        margin-right: 10px;
-        width: 100px;
-        height: auto;
-    }
-
-    .icon-container {
-        margin-left: 10px;
-        animation: heartbeat 1.5s ease-in-out infinite;
-    }
-
-    .icon-container img {
-        min-height: 30px;
-    }
-}
-
-@media (max-width: 435px) {
-
-    .mobileHeader {
-        padding: 0;
-    }
-
-    .hamburger-icon {
-        padding-right: 25px;
-    }
-
-    .dropdown-child {
-        min-width: 100px;
-    }
-
-    .logo-and-icon {
-        padding: 0;
-    }
-
-    .logo-link {
-        display: block;
-        margin-right: 10px;
-        width: 100px;
-        height: auto;
-    }
-
-    .icon-container {
-        margin-left: 10px;
-        animation: heartbeat 1.5s ease-in-out infinite;
-    }
-
-    .icon-container img {
-        min-height: 30px;
-    }
-
-    main {
-        min-height: 76vh;
-    }
-
-    form {
-        min-width: 200px;
-        margin: 0 40px;
-    }
-
-    label {
-        margin-bottom: 0;
-        font-size: 16px;
-    }
-
-    input[type="email"], input[type="password"] {
-        font-size: small;
-    }
-
-    .button {
-        font-size: 18px;
-    }
-}

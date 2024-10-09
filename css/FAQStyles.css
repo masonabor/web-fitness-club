@@ -148,38 +148,3 @@ footer {
     line-height: 1.33;
     font-weight: 400;
 }
-
-@media (max-width: 435px) {
-
-    .mobileHeader {
-        padding: 0;
-    }
-
-    .hamburger-icon {
-        padding-right: 25px;
-    }
-
-    .dropdown-child {
-        min-width: 100px;
-    }
-
-    .logo-and-icon {
-        padding: 0;
-    }
-
-    .logo-link {
-        display: block;
-        margin-right: 10px;
-        width: 100px;
-        height: auto;
-    }
-
-    .icon-container {
-        margin-left: 10px;
-        animation: heartbeat 1.5s ease-in-out infinite;
-    }
-
-    .icon-container img {
-        min-height: 30px;
-    }
-}

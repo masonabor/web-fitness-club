@@ -363,14 +363,6 @@ footer {
  
     }
 
-    .hamburger {
-        font-size: 30px;
-        color: rgb(255, 0, 0);
-        display: none;
-        
-   
-    }
-
     .icon-container img {
         /* display: none; */
     }
@@ -431,7 +423,6 @@ footer {
         font-size: 18px;
     }
 
-
     /* About Us Section */
     #about-us {
         display: flex;
@@ -469,6 +460,10 @@ footer {
 
     .footer-icons {
         gap: 10px; /* Зменшення відступів між іконками */
+    }
+
+    .container {
+        flex-direction: column;
     }
 }
 
