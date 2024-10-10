@@ -6,8 +6,9 @@
   <meta name="authors" content="Мартинюк Юрій, Маляревич Анжела"/>
   <meta name="description" content="Веб-сайт спортивного залу СпортЛайф"/>
   <title>Панель адміністратора</title>
-  <link rel="stylesheet" href="/css/authorizationAndRegistrationStyles.css">
-  <link rel="stylesheet" href="/css/mediaStyles.css">
+  <link rel="stylesheet" href="/css/adminPageStyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/css/hoverFooter.css">
   <link rel="icon" href="/img/Trenbolone.jpeg"/>
 </head>
 <body>
@@ -25,11 +26,10 @@
     </div>
     <div class="dropdown">
       <div class="dropdown-child">
+        <a href="../html/homepage.html">Головна</a>
         <a href="../html/registration.html">Реєстрація</a>
         <a href="../html/authorization.html">Авторизація</a>
         <a href="../html/FAQ.html">Питання та відповіді</a>
-        <a href="">4</a>
-        <a href="">5</a>
     </div>
       <div class="hamburger-icon">
         <button class="hamburger">☰</button>
@@ -39,8 +39,45 @@
 
 </header>
 <main>
+  <div class="admin-panel">
+    <h1>Панель адміністратора</h1>
 
+    <table class="admin-table">
+      <thead>
+      <tr>
+        <th>Користувач</th>
+        <th>Баланс абонемента</th>
+        <th>Наступна дата оплати</th>
+        <th>Дії</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Іван Іванов</td>
+        <td>500 грн</td>
+        <td>2024-10-25</td>
+        <td>
+          <button class="view-btn">Переглянути</button>
+          <button class="edit-btn">Редагувати</button>
+          <button class="delete-btn">Видалити</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Анна Петренко</td>
+        <td>300 грн</td>
+        <td>2024-11-10</td>
+        <td>
+          <button class="view-btn">Переглянути</button>
+          <button class="edit-btn">Редагувати</button>
+          <button class="delete-btn">Видалити</button>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
 </main>
+
 <footer>
 
   <div class="footer-content">
@@ -63,11 +100,8 @@
       </a>
 
     </div>
-
-    <div class="copyright">© 2007–2024 Group of companies TREN</div>
-
   </div>
-
+  <div class="copyright">© 2007–2024 Group of companies TREN</div>
 </footer>
 </body>
 </html>

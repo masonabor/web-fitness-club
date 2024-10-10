@@ -108,13 +108,8 @@ header {
     max-height: 500px; /* встановіть це значення залежно від висоти вмісту */
 }
 
-/* questions----------------------------------------------------start */
-
-/* questions----------------------------------------------------end */
-
 footer {
-    padding: 5vh;
-    text-align: center;
+    padding: 10px;
     color: aliceblue;
     background-color: black;
 }
@@ -134,6 +129,7 @@ footer {
 .footer-icons {
     display: flex;
     gap: 20px;
+    padding-bottom: 10px;
 }
 
 .icon-link {
@@ -153,6 +149,54 @@ footer {
     font-weight: 400;
 }
 
-@media(max-width: 435px) {
+@media (max-width: 435px) {
 
+    .mobileHeader {
+        padding: 0;
+    }
+
+    .hamburger-icon {
+        padding-right: 10px;
+    }
+
+    .hamburger {
+        font-size: 25px;
+    }
+
+    .dropdown-child {
+        min-width: 100px;
+    }
+
+    .logo-and-icon {
+        padding: 0;
+    }
+
+    .logo-link {
+        display: block;
+        margin-right: 10px;
+        width: 100px;
+        height: auto;
+    }
+
+    .icon-container {
+        margin-left: 10px;
+        animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    .icon-container img {
+        min-height: 30px;
+    }
+
+    .dropdown-child a {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .footer-icons {
+        gap: 15px;
+    }
+
+    .icon-link {
+        font-size: 18px;
+    }
 }

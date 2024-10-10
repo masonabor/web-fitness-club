@@ -1,154 +1,90 @@
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-}
-/* Global Styles -------------------------------------------- end */
-
-/* Header --------------------------------------------- start */
-header {
-    padding: 2vh;
-    background-color: black;
-}
-
-.logo-link {
-    margin-right: 30px; /* Відступ між логотипом та іконкою */
-    display: block;
-    height: 90px;
-    align-items: center;
-}
-
-.logo {
-    max-height: 100%;
-    max-width: 100%;
+main {
     height: auto;
-    width: auto;
-    border-radius: 10px;
+    min-height: 75vh;
 }
 
-.icon-container {
-    margin-left: 40px; /* Відступ зліва від .logo-link */
-    animation: heartbeat 1.5s ease-in-out infinite;
-}
-
-.icon-container img {
-    min-height: 70px;
-}
-
-@keyframes heartbeat {
-    0%,100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.3);
-    }
-}
-
-.mobileHeader {
-    padding: 13px 6px 13px 13px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo-and-icon {
-    padding: 13px 6px 13px 13px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hamburger-icon {
-    display: flex;
-    justify-content: flex-end;
-    width: 50px;
-}
-
-.hamburger {
-    display: block;
-    font-size: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    height: 100%;
-    width: 50px;
-    box-sizing: border-box;
-}
-
-.dropdown {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-child {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    background-color: black;
-    min-width: 200px;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-.dropdown-child a {
-    color: white;
+.admin-panel {
     padding: 20px;
-    text-decoration: none;
-    display: block;
+    background-color: #f9f9f9;
 }
 
-.dropdown:hover .dropdown-child {
-    opacity: 1;
-    max-height: 500px; /* встановіть це значення залежно від висоти вмісту */
+h1 {
+    font-size: clamp(20px, 2vw, 32px);
 }
 
-footer {
-    padding: 5vh;
-    text-align: center;
-    color: aliceblue;
-    background-color: black;
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: clamp(12px, 1vw, 17px);
+    text-align: left;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.admin-table th, .admin-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
 }
 
-.footer-title {
-    font-size: 24px;
+.admin-table th {
+    background-color: darkgray;
+    color: black;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.admin-table tr:hover {
+    background-color: #ddd;
+}
+
+.view-btn, .edit-btn, .delete-btn {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: clamp(10px, 1vw, 17px);
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.view-btn {
+    background-color: #2196F3;
     color: white;
-    margin-bottom: 15px;
+    border: none;
 }
 
-.footer-icons {
-    display: flex;
-    gap: 20px;
+.edit-btn {
+    background-color: #FFEB3B;
+    border: none;
 }
 
-.icon-link {
+.delete-btn {
+    background-color: #F44336;
     color: white;
-    font-size: 24px;
-    text-decoration: none;
+    border: none;
 }
 
-.icon-link:hover {
-    color: #ddd;
+.view-btn:hover {
+    transform: scale(1.1);
+    background-color: deepskyblue;
 }
 
-.footer .copyright {
-    float: left;
-    font-size: 12px;
-    line-height: 1.33;
-    font-weight: 400;
+.edit-btn:hover {
+    transform: scale(1.1);
+    background-color: gold;
+}
+
+.delete-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff4b5c;
 }
 
 @media (max-width: 435px) {
+    main {
+        min-height: 81vh;
+    }
 
+    .admin-table th {
+        padding: 4px;
+    }
 }
