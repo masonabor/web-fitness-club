@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chat-container {
+            width: 50%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .message {
+            padding: 10px;
+            margin-bottom: 10px;
+            max-width: 70%;
+            border-radius: 10px;
+            word-wrap: break-word;
+        }
+
+        .user1 {
+            background-color: #e2f0fb;
+            text-align: left;
+            align-self: flex-start;
+        }
+
+        .user2 {
+            background-color: #fce4d6;
+            text-align: right;
+            align-self: flex-end;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #f4d03f;
+            color: #333;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <h3>Спільний чат</h3>
+    <div class="chat-messages" id="chatMessages"></div>
+
+    <div class="input-container">
+        <label for="messageUser1">Введіть повідомлення</label>
+        <input type="text" id="messageUser1" placeholder="User 1: Введіть текст">
+        <button onclick="sendMessage(1)">Відправити User 1</button>
+    </div>
+    <div class="input-container">
+        <label for="messageUser2">Введіть повідомлення</label>
+        <input type="text" id="messageUser2" placeholder="User 2: Введіть текст">
+        <button onclick="sendMessage(2)">Відправити User 2</button>
+    </div>
+</div>
+
+<script>
+    function sendMessage(user) {
+        let message = '';
+        let chatBox = document.getElementById('chatMessages');
+
+        if (user === 1) {
+            message = document.getElementById('messageUser1').value;
+            document.getElementById('messageUser1').value = '';
+        } else if (user === 2) {
+            message = document.getElementById('messageUser2').value;
+            document.getElementById('messageUser2').value = '';
+        }
+
+        if (message.trim() !== '') {
+            const newMessage = document.createElement('div');
+            newMessage.classList.add('message');
+            newMessage.classList.add(user === 1 ? 'user1' : 'user2');
+            newMessage.textContent = `USER ${user}: ${message}`;
+
+            chatBox.appendChild(newMessage);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    }
+</script>
+
+</body>
+</html>
