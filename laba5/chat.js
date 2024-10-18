@@ -5,11 +5,11 @@ function sendMessage(user) {
     if (user === "1") {
         message = document.getElementById('user1').value;
         chatBox = document.getElementById('user1');
-        document.getElementById('user1').value = ''; // Очищення поля
+        document.getElementById('user1').value = '';
     } else {
         message = document.getElementById('user2').value;
         chatBox = document.getElementById('user2');
-        document.getElementById('user2').value = ''; // Очищення поля
+        document.getElementById('user2').value = '';
     }
 
     if (message.trim() !== '') {
@@ -18,6 +18,6 @@ function sendMessage(user) {
         newMessage.classList.add(user === 1 ? 'user1' : 'user2');
         newMessage.textContent = `USER ${user}: ${message}`;
         chatBox.appendChild(newMessage);
-        chatBox.scrollTop = chatBox.scrollHeight; // Прокручування вниз
+        chatBox.scrollTop = chatBox.scrollHeight;
     }
 }

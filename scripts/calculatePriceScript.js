@@ -1,4 +1,4 @@
-const monthsInput = document.getElementById('months');
+const monthsInput = document.querySelector('input[type="number"]')
 const priceOutput = document.getElementById('price');
 const monthsForTextOutput = document.getElementById('monthsForText');
 const pricePerMonthOutput = document.getElementById('pricePerMonth');
