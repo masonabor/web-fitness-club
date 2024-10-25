@@ -15,7 +15,7 @@ $(document).ready(function () {
         event.preventDefault();
         clearErrors();
 
-        let isValid = validateFirstName() & validateLastName() & validateMiddleName() & validateEmail() & validatePhone() & validateGender();
+        let isValid = validateFirstName() & validatePassword() & validateLastName() & validateMiddleName() & validateEmail() & validatePhone() & validateGender();
 
         if (isValid) {
 
