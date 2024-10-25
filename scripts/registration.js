@@ -1,50 +1,29 @@
 $(document).ready(function () {
-    // Маска для телефону
+
     $('#phone').mask('+38(000) 000-00-00', {
         placeholder: "+38(0__) ___--"
-    });
+    }).on('input', validatePhone);
 
-    // Обробник події для форми
+    $('#firstname').on('input', validateFirstName);
+    $('#lastname').on('input', validateLastName);
+    $('#email').on('input', validateEmail);
+    $('#middlename').on('input', validateMiddleName);
+    $('input[name="gender"]').on('change', validateGender);
+
     $('#registrationForm').on('submit', function (event) {
         event.preventDefault();
         clearErrors();
 
-        let isValid = true;
-
-        const name = $('#firstname').val();
-        const surname = $('#lastname').val();
-        const email = $('#email').val();
-        const phone = $('#phone').val();
-        const gender = $('input[name="gender"]:checked').val();
-
-        // Валідація
-        if (!name) {
-            showError('firstnameError', 'Введіть ім\'я');
-            isValid = false;
-        }
-        if (!surname) {
-            showError('lastnameError', 'Введіть прізвище');
-            isValid = false;
-        }
-        if (!email) {
-            showError('emailError', 'Введіть email');
-            isValid = false;
-        }
-        
-        // Валідація номеру телефону (тільки цифри)
-        const phoneDigits = phone.replace(/\D/g, ''); // Видаляємо всі нецифрові символи
-        if (phoneDigits.length !== 12) { // Перевірка на кількість цифр (12: +38 і номер)
-            showError('phoneError', 'Номер телефону має містити 12 цифр');
-            isValid = false;
-        }
-        
-        if (!gender) {
-            showError('genderError', 'Оберіть стать');
-            isValid = false;
-        }
+        let isValid = validateFirstName() & validateLastName() & validateMiddleName() & validateEmail() & validatePhone() & validateGender();
 
         if (isValid) {
-            // Додавання до таблиці
+
+            const name = $('#firstname').val();
+            const surname = $('#lastname').val();
+            const email = $('#email').val();
+            const phone = $('#phone').val();
+            const gender = $('input[name="gender"]:checked').val();
+
             const newRow = `
                 <tr>
                     <td><input type="checkbox" class="rowCheckbox"></td>
@@ -56,20 +35,16 @@ $(document).ready(function () {
                 </tr>`;
             $('#dataTable tbody').append(newRow);
 
-            // Показуємо таблицю і кнопки після першої відправки
             $('#dataTable, #deleteRows, #duplicateRows').show();
 
-            // Очищення форми
             $('#registrationForm')[0].reset();
         }
     });
 
-    // Видалення вибраних рядків
     $('#deleteRows').click(function () {
         $('.rowCheckbox:checked').closest('tr').remove();
     });
 
-    // Дублювання вибраних рядків
     $('#duplicateRows').click(function () {
         $('.rowCheckbox:checked').each(function () {
             const clonedRow = $(this).closest('tr').clone();
@@ -78,8 +53,84 @@ $(document).ready(function () {
     });
 });
 
+const noDigitsRegex = /^\D+$/;
+
+function validateFirstName() {
+    const name = $('#firstname').val();
+    if (!name) {
+        showError('firstnameError', 'Введіть ім\'я');
+        return false;
+    } else if (!noDigitsRegex.test(name)) {
+        showError('firstnameError', 'Ім\'я не повинно містити цифри');
+        return false;
+    }
+    clearError('firstnameError');
+    return true;
+}
+
+function validateLastName() {
+    const surname = $('#lastname').val();
+    if (!surname) {
+        showError('lastnameError', 'Введіть прізвище');
+        return false;
+    } else if (!noDigitsRegex.test(surname)) {
+        showError('lastnameError', 'Прізвище не повинно містити цифри');
+        return false;
+    }
+    clearError('lastnameError');
+    return true;
+}
+
+function validateMiddleName() {
+    const middlename = $('#middlename').val();
+    if (!middlename) {
+        showError('middlenameError', 'Введіть по-батькові');
+        return false;
+    } else if (!noDigitsRegex.test(middlename)) {
+        showError('middlenameError', 'По-батькові не повинно містити цифри');
+        return false;
+    }
+    clearError('lastnameError');
+    return true;
+}
+
+function validateEmail() {
+    const email = $('#email').val();
+    if (!email) {
+        showError('emailError', 'Введіть email');
+        return false;
+    }
+    clearError('emailError');
+    return true;
+}
+
+function validatePhone() {
+    const phone = $('#phone').val();
+    const phoneDigits = phone.replace(/\D/g, ''); // Видаляємо всі нецифрові символи
+    if (phoneDigits.length !== 12) { // Перевірка на кількість цифр (12: +38 і номер)
+        showError('phoneError', 'Номер телефону має містити 12 цифр');
+        return false;
+    }
+    clearError('phoneError');
+    return true;
+}
+
+function validateGender() {
+    const gender = $('input[name="gender"]:checked').val();
+    if (!gender) {
+        showError('genderError', 'Оберіть стать');
+        return false;
+    }
+    clearError('genderError');
+    return true;
+}
+
 function showError(id, message) {
     $(`#${id}`).text(message).css('color', 'red');
+}
+
+function clearError(id) {
+    $(`#${id}`).text('');
 }
 
 function clearErrors() {

@@ -45,7 +45,7 @@
 </header>
 
 <main>
-  <form id="registrationForm" method="post" class="inputs">
+  <form id="registrationForm" method="post" class="inputs" novalidate>
     <div class="input">
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
@@ -60,7 +60,7 @@
 
     <div class="input">
       <label for="lastname">Прізвище</label>
-      <input type="text" id="lastname" name="lastname" required minlength="3">
+      <input type="text" id="lastname" name="lastname"  minlength="3">
       <span class="error-message" id="lastnameError"></span>
     </div>
 
@@ -73,6 +73,7 @@
     <div class="input">
       <label for="middlename">По батькові</label>
       <input type="text" id="middlename" name="middlename">
+      <span class="error-message" id="middlenameError"></span>
     </div>
 
     <div class="input">
@@ -82,7 +83,6 @@
     </div>
 
     <div class="input">
-      <label for="sex">Стать</label><br>
       <label class="custom-radio">
         Чоловіча
         <input type="radio" id="male" name="gender" value="male" required>
@@ -108,21 +108,21 @@
       <button class="btn" type="submit">Зареєструватися</button>
     </div>
   </form>
-
-  <table id="dataTable" border="1">
-    <thead>
-      <tr>
-        <th>Вибір</th>
-        <th>Ім'я</th>
-        <th>Прізвище</th>
-        <th>Email</th>
-        <th>Телефон</th>
-        <th>Стать</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
+  <div class="table-container">
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Вибір</th>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Email</th>
+          <th>Телефон</th>
+          <th>Стать</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
   <div class="btn-wrapper">
     <button class="btn" id="deleteRows">Видалити вибрані</button>
     <button class="btn" id="duplicateRows">Дублювати вибрані</button>
