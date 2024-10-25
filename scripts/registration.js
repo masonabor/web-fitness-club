@@ -5,6 +5,7 @@ $(document).ready(function () {
     }).on('input', validatePhone);
 
     $('#firstname').on('input', validateFirstName);
+    $('#password').on('input', validatePassword);
     $('#lastname').on('input', validateLastName);
     $('#email').on('input', validateEmail);
     $('#middlename').on('input', validateMiddleName);
@@ -78,6 +79,16 @@ function validateLastName() {
         return false;
     }
     clearError('lastnameError');
+    return true;
+}
+
+function validatePassword() {
+    const password = $('#password').val();
+    if (!password) {
+        showError('passwordError', 'Введіть пароль');
+        return false;
+    }
+    clearError('passwordError');
     return true;
 }
 
